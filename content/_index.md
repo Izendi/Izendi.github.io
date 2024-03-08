@@ -1,5 +1,5 @@
 ---
-title: "Content"
+title: "Christopher Winters Portfolio"
 showViews: false
 showLikes: false
 ---

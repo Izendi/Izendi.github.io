@@ -2,7 +2,7 @@
 title: "Users"
 date: 2020-08-14
 draft: false
-description: "Some real-life Blowfish examples."
+description: "Christopher Winters Portfolio Website"
 slug: "users"
 tags: ["users", "sample"]
 showDate: false
