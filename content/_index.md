@@ -1,5 +1,5 @@
 ---
-title: "Welcome"
+title: "Content"
 showViews: false
 showLikes: false
 ---

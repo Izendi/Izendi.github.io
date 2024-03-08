@@ -10,14 +10,14 @@ title = "Christopher Winters Portfolio"
   dateFormat = "2 January 2006"
   # logo = "img/ProfileImg.png"
   # secondaryLogo = "PATH"
-  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+  description = "Christopher Winters Portfolio Website"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [author]
   name = "Christopher Winters"
   image = "img/ProfileImg.png"
   headline = "Portfolio of my projects and other endeavours"
-  bio = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+  bio = "Christopher Winters Portfolio Website"
   links = [
     { github = "https://github.com/izendi" },
     { linkedin = "https://www.linkedin.com/in/christopher-winters-04a517268/"},
