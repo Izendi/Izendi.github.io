@@ -126,13 +126,6 @@ smartTOCHideUnfocusedChildren = false
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
 
-[buymeacoffee]
-  identifier = "nunocoracao"
-  globalWidget = true
-  globalWidgetMessage = ""
-  globalWidgetColor = "#FFDD00"
-  globalWidgetPosition = "Right"
-
 [verification]
   # google = ""
   # bing = ""
