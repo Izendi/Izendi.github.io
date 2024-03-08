@@ -11,6 +11,8 @@ showReadingTime: false
 showEdit: false
 layoutBackgroundHeaderSpace: false
 cardViewScreenWidth: true
+showViews: false
+showLikes: false
 ---
  
 

@@ -1,19 +1,14 @@
 ---
-title: "Samples"
-description: "See what's possible with Blowfish."
+title: "Other"
 
 cascade:
   showEdit: false
   showSummary: false
   hideFeatureImage: false
+  showViews: false
+  showLikes: false
 ---
 
-{{< lead >}}
-Blowfish brings your content to life. :heart_eyes:
-{{< /lead >}}
-
-This section contains some demo pages that show how Blowfish renders different types of content. You can also see an example [taxonomy listing]({{< ref "tags" >}}) page.
-
-_**Sidenote:** This page is just a standard Blowfish article listing and Hugo has been configured to generate a `samples` content type and display article summaries._
+Nothing to see here (yet)
 
 ---

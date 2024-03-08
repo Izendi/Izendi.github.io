@@ -1,7 +1,7 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Blowfish"
+title = "Christopher Winters Portfolio"
 
 [params]
   displayName = "EN"
@@ -14,14 +14,14 @@ title = "Blowfish"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [author]
-  name = "Blowfish"
-  image = "img/blowfish_logo.png"
-  headline = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+  name = "Christopher Winters"
+  image = "img/awesomeface.png"
+  headline = "Portfolio of my projects and other endeavours"
   bio = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
   links = [
-    { x-twitter = "https://twitter.com/burufugu" },
-    { mastodon = "https://masto.ai/@blowfish" },
-    { github = "https://github.com/nunocoracao/blowfish" },
+    { github = "https://github.com/izendi" },
+    { linkedin = "https://www.linkedin.com/in/christopher-winters-04a517268/"},
+    { email = "cjwinters1404@gmail.com"},
   ]
 
   
