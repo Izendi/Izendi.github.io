@@ -15,7 +15,7 @@ title = "Christopher Winters Portfolio"
 
 [author]
   name = "Christopher Winters"
-  image = "img/awesomeface.png"
+  image = "img/ProfileImg.png"
   headline = "Portfolio of my projects and other endeavours"
   bio = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
   links = [

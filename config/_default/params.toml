@@ -18,8 +18,8 @@ mainSections = ["projects"]
 disableImageOptimization = false
 disableTextInHeader = false
 
-defaultBackgroundImage = "/img/ocean.jpg"
-defaultFeaturedImage = "/img/ocean.jpg"
+defaultBackgroundImage = "/img/blurSnowCity.jpg"
+defaultFeaturedImage = "/img/pinkSunset.jpg"
 
 highlightCurrentMenuArea = true
 smartTOC = true
