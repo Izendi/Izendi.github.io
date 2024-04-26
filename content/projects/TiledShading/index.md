@@ -3,7 +3,7 @@ title: "Tiled Shading"
 date: 2024-03-08
 draft: false
 description: "Overview of research paper"
-tags: ["project", "blog"]
+tags: ["blog"]
 series_order: 1
 showViews: false
 showLikes: false
