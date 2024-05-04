@@ -17,15 +17,7 @@ A paper that can be found at: https://www.cse.chalmers.se/~uffe/tiled_shading_pr
 
 ![virtual environment img](Featured.png)
 
-Looks pretty cool huh <br><br>
+[ In development ] <br><br>
 
-Image of the GUI that can be used to manipulate the scene.
-
-![menu img](MenuIMG.png)
-
-
-## Step 1
-
-Best of all it's shiny!
 
 

@@ -1,8 +1,8 @@
 ---
-title: "Zendite Graphics Engine"
+title: "Small Scale OpenGL ECS Game Engine"
 date: 2024-03-08
 draft: false
-description: "Overview of devlopment process"
+description: "Overview of Development process"
 tags: ["project", "blog"]
 series_order: 1
 showViews: false
@@ -13,17 +13,15 @@ showLikes: false
 Small Scale Game Engine created using OpenGl
 {{< /lead >}}
 
-## Final Product look
+## Sample Scene
 
 ![virtual environment img](Featured.png)
 
-Looks pretty cool huh <br><br>
-
-Image of the GUI that can be used to manipulate the scene.
+Image of the GUI that can be used to manipulate entities in the scene.
 
 ![menu img](MenuIMG.png)
 
 
-Best of all it's shiny!
+[ In Development ]
 
 
