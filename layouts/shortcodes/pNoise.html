@@ -1,0 +1,90 @@
+<!-- layouts/shortcodes/draw1.html -->
+
+<div id="output">output</div>
+
+<div id="p5-canvas-container" style="text-align: center; margin-top: 20px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script>
+
+  new p5((p) => {
+
+    let nValue = p.noise(100);
+
+    const outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = nValue;
+
+    let walker;
+    let circleSize = 45;
+
+    p.setup = function() {
+      p.createCanvas(600, 400);
+      walker = new Walker(p);
+      p.background(220);
+
+      p.loadPixels();
+
+      for (let y = 0; y < p.height; y++) 
+      {
+        for (let x = 0; x < p.width; x++) 
+        {
+          let index = (x + y * p.width) * 4; // Calculate the index in the pixels array
+          p.pixels[index] = x % 255;         // Set the red value
+          p.pixels[index + 1] = y % 255;     // Set the green value
+          p.pixels[index + 2] = (x + y) % 255; // Set the blue value
+          p.pixels[index + 3] = 255;         // Set the alpha value
+        }
+      }
+
+      p.updatePixels();
+
+      p.rect(100, 50, 25, 75);
+
+    };
+
+
+    p.draw = function() 
+    {
+      walker.step();
+      walker.show();
+      
+    };
+
+    class Walker
+    {
+      constructor(p)
+      {
+        this.p = p;
+        this.tx = 0;
+        this.ty = 10000;
+        this.x = 0;
+        this.y = 0;
+      }
+
+      step()
+      {
+         //{!2} x- and y-position mapped from noise
+          this.x = this.p.map(this.p.noise(this.tx), 0, 1, 0, this.p.width);
+          this.y = this.p.map(this.p.noise(this.ty), 0, 1, 0, this.p.height);
+
+          // Move forward through "time."
+          this.tx += 0.01;
+          this.ty += 0.01;
+      }
+
+      show()
+      {
+          circleSize = p.random(30, 60);
+
+          this.p.strokeWeight(2);
+          this.p.fill(127, 0, 0);
+          this.p.stroke(0);
+          this.p.circle(this.x, this.y, circleSize);
+      }
+    }
+
+
+  }, 'p5-canvas-container');
+
+
+  
+</script>

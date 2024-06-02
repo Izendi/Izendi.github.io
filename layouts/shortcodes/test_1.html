@@ -1,0 +1,61 @@
+<!-- layouts/shortcodes/test_1.html -->
+<div id="p5-canvas-container" style="text-align: center; margin-top: 20px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script>
+
+  new p5((p) => {
+
+    
+
+    let walker;
+
+    p.setup = function() {
+      p.createCanvas(600, 400);
+      walker = new Walker(p);
+      p.background(220);
+      p.rect(100, 50, 25, 75);
+    };
+
+
+    p.draw = function() 
+    {
+      walker.step();
+      walker.show();
+      
+    };
+
+    class Walker
+    {
+      constructor(p)
+      {
+        this.p = p;
+        this.tx = 0;
+        this.ty = 10000;
+      }
+
+      step()
+      {
+         //{!2} x- and y-position mapped from noise
+          this.x = this.p.map(this.p.noise(this.tx), 0, 1, 0, this.p.width);
+          this.y = this.p.map(this.p.noise(this.ty), 0, 1, 0, this.p.height);
+
+          // Move forward through "time."
+          this.tx += 0.01;
+          this.ty += 0.01;
+      }
+
+      show()
+      {
+        this.p.strokeWeight(2);
+        this.p.fill(127);
+        this.p.stroke(0);
+        this.p.circle(this.x, this.y, 48);
+      }
+    }
+
+
+  }, 'p5-canvas-container');
+
+
+  
+</script>

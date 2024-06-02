@@ -1,0 +1,38 @@
+{{- $id := .Get "id" | default "p5-canvas-container" -}}
+
+<div id="{{ $id }}" style="text-align: center; margin-top: 20px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script>
+  new p5((p) => {
+    let nValue = p.noise(100);
+    let walker;
+    let circleSize = 45;
+    var xoff2 = 1000;
+    let startVal = 0;
+
+    p.setup = function() {
+      p.createCanvas(600, 400);
+      p.background(220);
+      p.rect(100, 50, 25, 75);
+    };
+
+    p.draw = function() {
+      p.background(220);
+      p.stroke(230, 10, 5);
+      p.noFill();
+      p.beginShape();
+      var xoff = startVal;
+      for (var x = 0; x < p.width; x++) {
+        p.stroke(30);
+        var y = p.map(p.noise(xoff), 0, 1, 0, p.height);
+        p.vertex(x, y);
+        xoff += 0.02;
+      }
+      p.endShape();
+      startVal += 0.02;
+    };
+
+  }, '{{ $id }}');
+</script>
+
+<br><br>
