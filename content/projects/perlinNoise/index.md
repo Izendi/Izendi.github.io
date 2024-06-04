@@ -10,12 +10,14 @@ showLikes: false
 ---
 
 {{< lead >}}
-Using Perlin noise for procedural terrain generation
+Using Perlin noise for procedural terrain generation.
 {{< /lead >}}
 
 ## Examples
 
 Code uses examples from Daniel Shiffman's book 'The Nature of Code': https://github.com/nature-of-code/noc-book-2/blob/main/content/examples/00_randomness/example_i_6_perlin_noise_walker/sketch.js
+
+For my procedural world project, go to: [Procedural World Using Perlin Noise](../Procedural-World-PN)
 
 ## Perlin Noise graphed in 1D:
 

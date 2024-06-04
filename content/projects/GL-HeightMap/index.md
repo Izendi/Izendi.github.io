@@ -13,6 +13,10 @@ showLikes: false
 A basic heightfield implementation in OpenGL
 {{< /lead >}}
 
+## Rendering a Height Field
+The rendering process is quite intuitive once you understand the basic idea, but there are some minor difficulties that can cause a slight headache if not handled properly
+
+
 ## Final Result
 
 ![hm img](Featured.png)
