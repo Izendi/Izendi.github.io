@@ -1,0 +1,23 @@
+<div id='{{ .Get "id" }}'></div>
+<script>
+  (function() {
+    var uniqueID = '{{ .Get "id" }}';
+    var messageContent = '{{ .Get "message" }}';
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      var container = document.getElementById(uniqueID);
+      
+      if (container) {
+        var img = document.createElement("img");
+        img.src = messageContent;
+        img.alt = "Description of the image";
+        img.style.display = "block";
+        img.style.marginTop = "10px";
+        img.style.marginLeft = "auto";
+        img.style.marginRight = "auto";
+        
+        container.appendChild(img);
+      }
+    });
+  })();
+</script>
