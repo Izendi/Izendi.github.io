@@ -19,13 +19,13 @@ I discuss the use of noise in computer graphics in a separate blog post (which c
 ## Video of Final Product
 {{< youtube FaSCmcUDz34>}}
 
-## Introduction
+## 1. Introduction
 Perlin noise produces pseudo random number values that have a smooth gradient change from one value to another. Unlike white noise which just outputs random values with no regard to what value came before. (See [here](../perlinnoise) for more info)
 
 We generate Perlin noise in one, two or three dimensions. When generating in 2D, we essentially create a grid of noise values.
 In graphics, colors can be represented as a combination of values between 0-1. To understand how this can be used to generate terrain in a virtual world, it is first important to understand height fields:
 
-## Height fields
+## 2. Height fields
 Lets first recap how color can be represented in a computer using rgb values. Using rgb, pure red could be (1.0, 0.0, 0.0) with the first value representing red, and the second two green and blue. In OpenGl the range for each color channel is between 0 - 1, with 0 representing none of that color and 1 represents the full intensity of that color.
 
 If we make all three color channels the same value between 0 and 1, we get various shades of grey. 
@@ -46,7 +46,7 @@ This grey scale top down image of terrain from above is called a height field (o
 For in depth details on rendering a hight field in computer graphics, refer to my blog post on [OpenGl HeightMap with Phong Shading](../gl-heightmap)
 
 
-## Creating a Height Field Using Perlin Noise
+## 3. Creating a Height Field Using Perlin Noise
 We can create height fields in multiple ways: e.g. manually using image editing tools such as photo shop, using existing height fields (such as the one from [Planet Earth Height Field](https://tangrams.github.io/heightmapper/)).
 
 
@@ -135,14 +135,14 @@ A simple (but highly inefficient) method of seeing this in action, is to increme
 I created a function called `resetHF` which does this, and I call it at the end of every render loop.
 The downside to this is that you need to recreate your height field and VBO and send it back to the GPU every frame, but since this is just for testing and not intended for any sort of professional project, it should be fine (assuming our height field dimensions are not too big).
 
-## Changing the SEED value every frame:
+## 4. Changing the SEED value every frame
 
 If all works as intended you should get the following effect in your project:
 <br>(In the video example I swap between wire frame and regular rendering)
 
 {{< youtube YzAlLzu7KwY>}}
 
-## Decorating the terrain
+## 5. Decorating the terrain
 Honestly, if you are able to do this, and understand how everything works, the rest are mostly fundamental computer graphics techniques all combined together to make a visually interesting scene.
 
 Each probably deserves it's own in depth discussion, but as this post's focus was on using perlin noise to create a landscape I'll only go into each briefly here.
@@ -154,12 +154,12 @@ Before we break it down, the final scene  of my procedurally generated world loo
 ![Scene](scene_morning.png)
 
 
-## Breakdown of the various elements
+## 6. Breakdown of the various elements
 This video breaks it down in more detail (it is the same as the one at the top of the page)
 
 {{< youtube FaSCmcUDz34>}}
 
-## Implementing Grass
+## 7. Implementing Grass
 
 ![grass Image](grass.png)
 
@@ -167,7 +167,7 @@ The grass was inpired by a youtube video from a creator known as [Acerola](https
 
 The video can be found [here](https://www.youtube.com/watch?v=9dr-tRQzij4&t=627s)
 
-## Implementing Clouds
+## 8. Implementing Clouds
 
 ![clouds Image](clouds.png)
 
@@ -186,7 +186,7 @@ The image below shows a wireframe image of the skydome object.
 
 The cube which acts as my sun is both a directional and a point light, the directional light ignores the skydome object, but the point light illuminates the points it is close to. Hence you get the effect of the clouds being bright and white when the sun in behind them, but darker and more grey when the sun cube is far away.
 
-## Implementing Water
+## 9. Implementing Water
 
 ![water Image](water.png)
 
@@ -197,7 +197,7 @@ The video series can be found [here](https://www.youtube.com/playlist?list=PLRIW
 I changed the normal map used compared to the one recommended from the video series as my own version looked better with the suns specular highlights on the water.
 
 
-## Implementing Sun & Day/Night Cycle
+## 10. Implementing Sun & Day/Night Cycle
 
 The...
 
