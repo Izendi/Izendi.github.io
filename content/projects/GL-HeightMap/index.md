@@ -199,11 +199,11 @@ Use the hight differences to calculate the two tangent vectors, then use the cro
 In this example, we utilize the height data from the height field texture to find the surface normals.
 <br><br>
 An alternate method, and the method I (unfortunately) used, is to first calculate the normals for each **face** on the mesh, then for each vertex, sum the normals of all faces that share the vertex, then normalize the resulting vertex to get the vertex normal.
-For each vertex, store this vertex in the VBO, and sample from it in the shader code, the fragment shader will interpolate the vertex surface normal from the three vertices that make up the triangle for each fragment to get the surface normal for each fragment (which will then be used for the phong shading).
+For each vertex, store this vertex in the VBO, and sample from it in the shader code, the fragment shader will interpolate the vertex surface normal from the three vertices that make up the triangle for each fragment to get the surface normal for each fragment (which will then be used for the Phong shading).
 <br><br>
-The only positive of this method over the previous one is that it does not require a height field texture. Therefore, if you just have a set of vertices (perhaps taken from a model made in blender or something), you could use this method to calculate the surface normals. However, aside from educational purposes, I see almost no beinifit to using this method, even if you did use something like blender to create a terrain mesh, you could just have blender export the model data with surface normals included.
+The only positive of this method over the previous one is that it does not require a height field texture. Therefore, if you just have a set of vertices (perhaps taken from a model made in blender or something), you could use this method to calculate the surface normals. However, aside from educational purposes, I see almost no benefit to using this method, even if you did use something like blender to create a terrain mesh, you could just have blender export the model data with surface normals included.
 <br><br>
-This project was my attempt at rendering a heightfield, using as little supporting documentaion as possible, as such, I had a version in my head of how I wanted to do things, that blinded me to the far more obvious and cleaner solution.
+This project was my attempt at rendering a heightfield, using as little supporting documentation as possible, as such, I had a version in my head of how I wanted to do things, that blinded me to the far more obvious and cleaner solution.
 <br<br>
 With that caveat out of the way, here was my implementation to calculate the surface normals, by first calculating the mesh faces:
 
