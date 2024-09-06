@@ -16,7 +16,7 @@ title = "Christopher Winters Portfolio"
 [author]
   name = "Christopher Winters"
   image = "img/ProfileImg.png"
-  headline = "Portfolio of my projects and other endeavours"
+  headline = "Portfolio of my computer graphics projects and other endeavours"
   bio = "Christopher Winters Portfolio Website"
   links = [
     { github = "https://github.com/izendi" },

@@ -4,6 +4,4 @@ showViews: false
 showLikes: false
 ---
 
-**NOTE**: *This site is currently undergoing a redesign, as such, many pages are incomplete or serve as a template for the time being.*
-
-Below I have included a list of my more interesting projects along with blogs/walkthroughs of my development journey for each.
+You can see a list of all my posted projects (not just the highlights below) by selecting "**Projects**" in the top right. In the top menu bar you can also find links to various other posts under "**Other**", my **GitHub** and the option to change the site motif between **dark** and **light** options.

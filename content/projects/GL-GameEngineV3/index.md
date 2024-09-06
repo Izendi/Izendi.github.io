@@ -1,5 +1,5 @@
 ---
-title: "Small Scale OpenGL ECS Game Engine"
+title: "Small Scale OpenGL ECS Framework"
 date: 2024-03-08
 draft: false
 description: "Overview of Development process"

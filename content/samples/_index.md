@@ -1,5 +1,5 @@
 ---
-title: "Other"
+title: "Posts"
 
 cascade:
   showEdit: false
@@ -9,6 +9,6 @@ cascade:
   showLikes: false
 ---
 
-Nothing to see here (yet)
+Various posts I thought were interesting.
 
 ---

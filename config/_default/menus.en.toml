@@ -12,12 +12,12 @@
 
 
 [[main]]
-  name = "Projects"
+  name = "Highlight Projects"
   pageRef = "projects"
   weight = 10
 
 [[main]]
-  name = "Other"
+  name = "Other Posts"
   pageRef = "samples"
   weight = 16
 

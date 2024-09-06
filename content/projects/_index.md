@@ -1,6 +1,6 @@
 ---
-title: "Projects"
-description: "Some highlights of projects that I thought were most interesting"
+title: "Highlight Projects"
+description: "Some highlights that I thought were most interesting"
 draft: false
 
 showDate : false
@@ -18,7 +18,7 @@ showLikes: false
 ---
 
 {{< lead >}}
-Some highlights of projects that I thought were most interesting.
+Some highlights that I thought were most interesting.
 {{< /lead >}}
 
 ---

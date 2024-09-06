@@ -390,8 +390,8 @@ fb.clear();
 
 It works, but is not efficient at all, especially since I wanted to render with glDrawElements, so I needed an EBO of indices.
 
-That being said, I believe it's a good exercise in testing you iterative algorithm programming abilities.
-But if you respect your own time (please), use the other method.
+That being said, I believe it's a good exercise in testing your iterative algorithm programming abilities.
+But if you respect your own time, (please) use the other method.
 
 There is a pretty good guest article on the [learn OpenGL website](https://learnopengl.com/Guest-Articles/2021/Tessellation/Height-map) for those who want more details.
 
