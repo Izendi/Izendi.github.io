@@ -36,7 +36,7 @@ Photos that make you want to model the scenery.
 
 <br>
 
-## View From Slottsskogen (summer and winter)
+## View From Slottsskogen
 ![Green Tower](reflectedClockTower.jpg)
 ![Snow Tower](SnowTower.jpg)
 
