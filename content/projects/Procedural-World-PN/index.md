@@ -14,7 +14,7 @@ This project was developed using OpenGl with C++ and a number of utility librari
 {{< /lead >}}
 
 ## Related
-I discuss the use of noise in computer graphics in a separate blog post (which can be found here: [Noise in Graphics](../perlinnoise))
+I discuss the use of noise in computer graphics in a separate blog post (which can be found here: [Noise in Graphics](../../samples/perlinnoise))
 
 ## Video of Final Product
 {{< youtube FaSCmcUDz34>}}

@@ -13,7 +13,7 @@ showLikes: false
 Using Perlin noise for procedural terrain generation.
 {{< /lead >}}
 
-## [Comming Soon]: 
+## [Coming Soon]: 
 
 **Nothing to see yet...**
 

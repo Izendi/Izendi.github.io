@@ -21,9 +21,9 @@
   pageRef = "samples"
   weight = 16
 
-  [[main]]
-  name = "Tags"
-  pageRef = "tags"
+[[main]]
+  name = "Contact Me"
+  pageRef = "contact"
   weight = 18
 
 #[[main]]

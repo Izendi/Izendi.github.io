@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "Contact Me"
 date: 2022-06-13T20:55:37+01:00
 draft: false
 
@@ -17,3 +17,8 @@ showViews: false
 showLikes: false
 ---
 
+Name: **Christopher Winters**
+
+Email: cjwinters1404@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/christopher-winters-04a517268/
