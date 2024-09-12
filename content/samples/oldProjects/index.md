@@ -1,6 +1,6 @@
 ---
 title: "Old Project Videos"
-date: 2024-11-12
+date: 2024-11-8
 draft: false
 description: "Videos of some old university projects I was a part of"
 tags: ["Video Presentation"]
