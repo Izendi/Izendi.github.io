@@ -171,7 +171,7 @@ The video can be found [here](https://www.youtube.com/watch?v=9dr-tRQzij4&t=627s
 
 ![clouds Image](clouds.png)
 
-The clouds were probably the part that turnout the least how I wanted them to.
+The clouds were probably the part that turned out least like I wanted them to.
 
 I was initially inspired by the clouds from [paradise is coming blog post](https://iquilezles.org/articles/dynclouds/) by **Inigo Quilez**.
 In fact, this project overall was inspired by the 64k video submission of [paradise is coming](https://www.youtube.com/watch?v=BUjUf0c7U3I).
