@@ -178,7 +178,7 @@ In fact, this project overall was inspired by the 64k video submission of [parad
 I'm not sure what it is, but I find late 1990s and early 2000s 3D graphics really appealing.
 
 My "clouds" were created by generating multiple octaves of perlin noise, that are offset in different directions, and then combined into a final texture image.
-THis texture image is then rendered onto a skydome object that surrounds the height field mesh landscape, but certain parts taht are below a certain brightness threshold are culled (which is what produces the gaps between the clouds that the light shines through).
+This texture image is then rendered onto a skydome object that surrounds the height field mesh landscape, but certain parts that are below a certain brightness threshold are culled (which is what produces the gaps between the clouds the light can shine through).
 
 The image below shows a wireframe image of the skydome object.
 
