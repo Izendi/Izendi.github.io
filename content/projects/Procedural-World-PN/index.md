@@ -194,7 +194,7 @@ The water was based of a video tutorial series from the youtuber [ThinMatrix](ht
 He has a series on water in OpenGL which was very useful as a template for my water system.
 The video series can be found [here](https://www.youtube.com/playlist?list=PLRIWtICgwaX23jiqVByUs0bqhnalNTNZh).
 
-I changed the normal map used compared to the one recommended from the video series as my own version looked better with the suns specular highlights on the water.
+I changed the normal map used compared to the one recommended from the video series as my own version looked better with the sun's specular highlights on the water.
 
 
 ## 10. Implementing Sun & Day/Night Cycle
