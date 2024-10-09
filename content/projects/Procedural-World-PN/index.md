@@ -190,7 +190,7 @@ The cube which acts as my sun is both a directional and a point light, the direc
 
 ![water Image](water.png)
 
-The water was based of a video tutorial series from the youtuber [ThinMatrix](https://www.youtube.com/@ThinMatrix).
+The water was based of a video tutorial series from the YouTuber [ThinMatrix](https://www.youtube.com/@ThinMatrix).
 He has a series on water in OpenGL which was very useful as a template for my water system.
 The video series can be found [here](https://www.youtube.com/playlist?list=PLRIWtICgwaX23jiqVByUs0bqhnalNTNZh).
 
