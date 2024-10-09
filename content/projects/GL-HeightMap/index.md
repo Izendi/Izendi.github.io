@@ -29,7 +29,7 @@ The top mesh is simply rendering the height field texture to a flat quad, the me
 If it's still unclear, don't worry, I'll go into more depth in upcoming explanation
 
 ## Rendering a Height Field
-The rendering process is quite intuitive once you understand the basic idea, but there are some minor difficulties that can cause a slight headache if not handled properly
+The rendering process is quite intuitive once you understand the basic idea, but there are some minor difficulties that can cause a slight headache if not handled properly.
 
 ## 1. Creating a Height Field Mesh
 
