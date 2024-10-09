@@ -26,7 +26,7 @@ A really easy way to understand it is with this image below:
 ![hf example img](HF_in_engine.png)
 
 The top mesh is simply rendering the height field texture to a flat quad, the mesh below it is also rendering the same texture to a flat plane, but the vertices making up the plane mesh have their ***y*** values adjusted (up or down) depending on the shade of grey on the textures corresponding texel.
-If your still a bit unsure, don't worry, I'll go into more depth in upcoming explanation
+If it's still unclear, don't worry, I'll go into more depth in upcoming explanation
 
 ## Rendering a Height Field
 The rendering process is quite intuitive once you understand the basic idea, but there are some minor difficulties that can cause a slight headache if not handled properly
