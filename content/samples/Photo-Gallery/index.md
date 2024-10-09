@@ -9,7 +9,7 @@ draft: false
 series_order: 1
 ---
 
-Photos that make you want to model the scenery.
+Photos that make you want to model the scenery. Mostly taken from my time in Gothenburg.
 
 <!--more-->
 
@@ -19,7 +19,7 @@ Photos that make you want to model the scenery.
 
 <br>
 
-## South and North Sunset
+## South and North
 ![SA Sunset](SA_Sunset.jpg)
 ![SW Sunset](daysEnd.jpg)
 

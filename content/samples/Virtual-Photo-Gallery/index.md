@@ -9,10 +9,6 @@ showViews: false
 showLikes: false
 ---
 
-{{< lead >}}
-Using Perlin noise for procedural terrain generation.
-{{< /lead >}}
-
 ## [Coming Soon]: 
 
 **Nothing to see yet...**
