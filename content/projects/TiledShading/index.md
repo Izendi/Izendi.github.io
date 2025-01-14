@@ -33,7 +33,7 @@ I also wrote about forward and deferred shading on a blog post (which uses the s
 2. <a id="ref2"> Cambridge Computer Science Talks, 2021 "Forward and Deferred Rendering," Online video clip, YouTube, Available: <https://www.youtube.com/watch?v=n5OiqJP2f7w\>. [Accessed on: Apr. 26, 2024].</a>
 3. <a id="ref3"> Wikipedia, "Deferred shading," Wikipedia: The Free Encyclopedia. Available: https://en.wikipedia.org/wiki/Deferred_shading. [Accessed: Sep. 6, 2024].</a>
 4. <a id="ref4">T. Akenine-Möller, E. Haines, and N. Hoffman, *Real-Time Rendering*, 4th ed. Boca Raton, FL: CRC Press, 2018.</a>
-5. <a id="ref4">O. Olsson and U. Assarsson, "Tiled Shading," Journal of Graphics, vol. GPU, pp. 235-251, Nov. 2011, doi: 10.1080/2151237X.2011.621761.</a>
+5. <a id="ref4">O. Olsson and U. Assarsson, "Tiled Shading," Journal of Graphics, pp. 235-251, Nov. 2011, doi: 10.1080/2151237X.2011.621761.</a>
 
 
 
