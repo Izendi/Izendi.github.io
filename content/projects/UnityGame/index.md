@@ -40,7 +40,7 @@ This was the small storage room (the starting room) and a larger room that conne
 [**To be continued**]
 
 ## Menu System
-The menu....
+The menu...
 
 
 ## References

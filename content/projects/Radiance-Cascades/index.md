@@ -249,7 +249,7 @@ The sketch below should clarify my description (the arrowheads color corresponds
 
 ![My RC Data Storage Plan](my_rc_impl.png)
 
-Firstly the level 0 compute shader...
+Firstly the level 0 compute shader, each probe will use four texels in the output texture to store its results. 
 
 [to be continued...]
 
