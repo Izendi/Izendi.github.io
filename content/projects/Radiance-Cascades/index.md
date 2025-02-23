@@ -33,9 +33,9 @@ Probes have been used effectivly, but the questions such as how many probes to u
 Radiance cascades attempts to solve these problems in two ways. First by explicitly structuring how probes are placed in the scene and secondly defining hard rules for how many rays are cast for each probe, which is determined by their placement in a hierarchy.
 
 Probes are split into "cascade hierarchies/levels" as Sannikov calls them. The first  level (cascade 0) has the highest number of probes. Let's say n (let's say n = 32), but only casts
-x number of rays (for simplicity let's say x = 4). Total number of rays for cascade level 0 is 32*4 = 128.
-Then cascade level 1 will have n/4 number of probes (32/4 = 8), but each probe will cast 2*x ( or 2*4 = 8 in this case ) rays. 8 * 8 = 64 total rays.
-Then cascade level 2 will have (n/4)/4 number of probes ( (32/4)/4 = 2 ), but each probe will cast 2*(2*x) ( or 2*(2*4) = 16 ) rays. 2 * 16 = 32 total rays.
+x number of rays (for simplicity let's say x = 4). Total number of rays for cascade level 0 is 32 x 4 = 128.
+Then cascade level 1 will have n/4 number of probes (32/4 = 8), but each probe will cast 2x ( or 2 x 4 = 8 in this case ) rays. 8 x 8 = 64 total rays.
+Then cascade level 2 will have (n/4)/4 number of probes ( (32/4)/4 = 2 ), but each probe will cast 2 x (2x) ( or 2 x (2 x 4) = 16 ) rays. 2 x 16 = 32 total rays.
 
 If we look at the sequence of rays being added with each level: 128, 64, 32. We can see the total number of rays going down with each level.
 For each cascade level above the current one, we can bilinearly interpolate between the 4 nearest probes to generate probe data for that lower level cascade. This means we have ray data equal to the sum of the number of rays cast on each level for each level 0 probe.
@@ -252,6 +252,10 @@ The sketch below should clarify my description (the arrowheads color corresponds
 Firstly the level 0 compute shader, each probe will use four texels in the output texture to store its results. 
 
 [to be continued...]
+
+## Testing the RC level 1 texture output
+
+![RC Level 1 Output](rc_lvl_1.png)
 
 ## References
 1. <a id="ref1"> Alexander Sannikov, "ExileCon 2023 - Rendering Path of Exile 2," YouTube, Jul. 29, 2023. [Online]. Available: https://www.youtube.com/watch?v=TrHHTQqmAaM&t=2037s. [Accessed: Jan. 14, 2025].</a>
