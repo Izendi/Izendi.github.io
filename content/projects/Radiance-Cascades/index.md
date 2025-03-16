@@ -251,7 +251,7 @@ The sketch below should clarify my description (the arrowheads color corresponds
 
 Firstly the level 0 compute shader, each probe will use four texels in the output texture to store its results. 
 
-[to be continued...]
+**[to be continued...]**
 
 ## Testing the RC level 1 texture output
 
@@ -304,6 +304,8 @@ Then we can merge this bilinearly interpolated color value with the K-1 probes r
 By doing this, the texture file associated with cascade level K-1 will contain the combined color data from cascade level K and cascade level K-1. If we repeat this process for cascade level K-2 and do bilinear interpolation and merging with cascade level K-1.
 Then cascade level K-2 will contain K-1's and K's cascade level color data.
 **If we repeat this until we get to level 0, then level 0's texture file will contain the merged color data for all the cascade levels, meaning our fragment shader only needs to locate the 4 nearest level 0 probes, and bilinearly interpolate between them to get the final color value for that fragment.**
+
+**[to be continued...]**
 
 ## References
 1. <a id="ref1"> Alexander Sannikov, "ExileCon 2023 - Rendering Path of Exile 2," YouTube, Jul. 29, 2023. [Online]. Available: https://www.youtube.com/watch?v=TrHHTQqmAaM&t=2037s. [Accessed: Jan. 14, 2025].</a>
