@@ -269,7 +269,26 @@ However, it soon became apparent that this would be highly computationally expen
 Let's use the following example to explain why this method is infeasible.
 In the image below, the red square marks the current fragment, with blue circles being level 0 probes, orange being level 1 probes and green being level 2 probes. (realistically all probes would cover roughly the same area and the level 0 probes would extend out to where the green level 2 probes are, but for the sake of the example, this number will suffice).
 
-First the red probe would need 
+![RC Incorrect Merging Approach 1](img_0786.png)
+
+![RC Incorrect Merging Approach 2](img_1.png)
+
+First the red probe would need to find the 4 nearest level 0 probes:
+
+![RC Incorrect Merging Approach 3](img_0792.png)
+
+Then each of the four nearest level 0 probes would need to find the four nearest level 1 probes and bilinearly interpolate between them to find the color value to merge with the current probes color value:
+
+![RC Incorrect Merging Approach 4](img_0788.png)
+![RC Incorrect Merging Approach 5](img_0789.png)
+
+Then each of the cascade level 1 probes (siz in this example), would need to find their four nearest cascade level 2 probes:
+
+![RC Incorrect Merging Approach 6](img_0790.png)
+![RC Incorrect Merging Approach 7](img_0791.png)
+
+In this example first we use 4 probes from level 0, then 6 probes from level 1 then 8 probes from level 2 (linear probe growth). Using this approach, each instantiation of the fragment shader will need to sample at least 18 probes and determine which to sample relative to the previous level's probe positions.
+That's a lot of work for the fragment shader. It was certain I was missing something and upon further investigation, found the correct approach (described in the next section).
 
 ## Merging Cascades (Second attempt)
 
