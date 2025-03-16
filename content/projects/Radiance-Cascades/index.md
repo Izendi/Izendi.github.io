@@ -257,6 +257,35 @@ Firstly the level 0 compute shader, each probe will use four texels in the outpu
 
 ![RC Level 1 Output](rc_lvl_1.png)
 
+## Merging Cascades (First attempt)
+
+A problem I encountered was how to merge the cascades.
+
+Originally, I planned to store the probe data from each cascade level completely separately with a texture for each cascade level. Then I planned to have the fragment shader march up through each level and sample the corresponding
+probe data at each level. 
+
+However, it soon became apparent that this would be highly computationally expensive. 
+
+Let's use the following example to explain why this method is infeasible.
+In the image below, the red square marks the current fragment, with blue circles being level 0 probes, orange being level 1 probes and green being level 2 probes. (realistically all probes would cover roughly the same area and the level 0 probes would extend out to where the green level 2 probes are, but for the sake of the example, this number will suffice).
+
+First the red probe would need 
+
+## Merging Cascades (Second attempt)
+
+After realizing the failings of my first method, I consulted with other members of the Radiance Cascades online community, and realized that storing each cascade level's lighting information in isolated textures was unnecessary.
+
+Each fragment, needs to find the 4 nearest level 0 probes and perform bilinear interpolation between them to get the lighting information from each of the four quadrants. From there we need to find the four nearest level N+1 probes and merge the values with the level N rays using bilinear interpolation.
+I was repeating this for each individual fragment, but it's important to remember that the probes never move, only the fragments, that means we can pre-compute the ligting information for all probes in cascade levels higher than level 0.
+
+Instead of starting at level 0 and working up, we can instead start at the top level K. Then once we have calculated all of K's probe lighting information and stored it in a texture file. We can move on to level K-1.
+
+Here, every time we compute a ray's color value, we can find it's corresponding branched rays in the 4 nearest K level probes, perform bilinear interpolation on the four probes relevant rays with the weight being the current K-1 level probe's position.
+Then we can merge this bilinearly interpolated color value with the K-1 probes ray being calculated.
+By doing this, the texture file associated with cascade level K-1 will contain the combined color data from cascade level K and cascade level K-1. If we repeat this process for cascade level K-2 and do bilinear interpolation and merging with cascade level K-1.
+Then cascade level K-2 will contain K-1's and K's cascade level color data.
+**If we repeat this until we get to level 0, then level 0's texture file will contain the merged color data for all the cascade levels, meaning our fragment shader only needs to locate the 4 nearest level 0 probes, and bilinearly interpolate between them to get the final color value for that fragment.**
+
 ## References
 1. <a id="ref1"> Alexander Sannikov, "ExileCon 2023 - Rendering Path of Exile 2," YouTube, Jul. 29, 2023. [Online]. Available: https://www.youtube.com/watch?v=TrHHTQqmAaM&t=2037s. [Accessed: Jan. 14, 2025].</a>
 2. <a id="ref2"> C. M. J. Osborne and A. Sannikov, "Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer," arXiv, Aug. 2024. [Online]. Available: https://arxiv.org/pdf/2408.14425v1. [Accessed: Jan. 14, 2025].</a>
