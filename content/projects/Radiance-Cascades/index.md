@@ -15,6 +15,12 @@ showLikes: false
 
 Radiance Cascades is a global illumination (GI) technique introduced by Alexander Sannikov from grinding gear games. It has most notably been used in the relatively new video game *Path of Exile 2* to impressive effect.
 
+## Cascade Levels being merged
+
+The top left image was the prototype textures, the levels start from the middle top level and each following image is a lower cascade level texture.
+
+![cascade level textures being merged](featured.png)
+
 ## The Problem Being Solved
 Traditional methods of generating accurate global illumination, such as Ray and Path tracing are limited by the high performance cost that grows with the number of rays being cast.
 At best, with basic ray tracing, increasing the number of rays cast per pixel has a linear growth cost. But when we look into more advanced techniques such as path tracing, which spawn multiple rays
@@ -314,3 +320,16 @@ Then cascade level K-2 will contain K-1's and K's cascade level color data.
 4. <a id="ref4"> SimonDev. "Featured Courses" [Web Page]. Available: [URL](https://simondev.io/courses). Accessed: February 15, 2025</a>
 
 
+## Images
+
+![prototype](sample.png)
+
+![level 3](lvl_3_tex.png)
+
+![level 2](lvl_2_tex.png)
+
+![level 1](lvl_1_tex.png)
+
+![level 0](lvl_0_tex.png)
+
+![level 0 alt](old_featured.png)
