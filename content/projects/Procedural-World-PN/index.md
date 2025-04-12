@@ -18,6 +18,8 @@ I discuss the use of noise in computer graphics in a separate blog post (which c
 
 ## Video of Final Product
 {{< youtube FaSCmcUDz34>}}
+-
+{{< youtube 170GDYNcOmQ>}}
 
 ## 1. Introduction
 Perlin noise produces pseudo random number values that have a smooth gradient change from one value to another. Unlike white noise which just outputs random values with no regard to what value came before. (See [here](../perlinnoise) for more info)
