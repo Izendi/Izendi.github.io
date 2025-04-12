@@ -18,7 +18,8 @@ I discuss the use of noise in computer graphics in a separate blog post (which c
 
 ## Video of Final Product
 {{< youtube FaSCmcUDz34>}}
-<br>
+
+## Relaxing Video
 {{< youtube 170GDYNcOmQ>}}
 
 ## 1. Introduction
