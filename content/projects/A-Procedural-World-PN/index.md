@@ -3,7 +3,7 @@ title: "Procedural World using Perlin Noise"
 date: 2024-5-16
 draft: false
 description: "Using Perlin noise for procedural terrain and cloud generation"
-tags: ["project", "blog"]
+tags: ["Video", "project", "blog"]
 series_order: 1
 showViews: false
 showLikes: false

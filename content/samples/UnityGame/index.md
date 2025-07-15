@@ -1,5 +1,5 @@
 ---
-title: "Unity GE: Urban Myth Game"
+title: "(Write Up In Progress) Unity GE: Urban Myth Game"
 date: 2024-03-10
 draft: false
 description: "Discussion of how I created a small scale unity game for my Game Dev university project"
