@@ -20,7 +20,7 @@ title = "Christopher Winters Portfolio"
   bio = "Christopher Winters Portfolio Website"
   links = [
     { github = "https://github.com/izendi" },
-    { linkedin = "https://www.linkedin.com/in/christopher-winters-04a517268/"},
+    { linkedin = "https://www.linkedin.com/in/cjwinters1404/"},
     { email = "https://izendi.github.io/contact/"},
   ]
 

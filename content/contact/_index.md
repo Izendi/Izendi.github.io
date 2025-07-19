@@ -21,4 +21,4 @@ Name: **Christopher Winters**
 
 Email: cjwinters1404@gmail.com
 
-LinkedIn: https://www.linkedin.com/in/christopher-winters-04a517268/
+LinkedIn: www.linkedin.com/in/cjwinters1404
