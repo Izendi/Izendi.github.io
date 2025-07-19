@@ -10,8 +10,13 @@ showLikes: false
 ---
 
 {{< lead >}}
-Small Scale Game Engine created using OpenGl
+Small Scale Game Engine created using OpenGl and C++
 {{< /lead >}}
+
+## Basis For
+This C++ OpenGl framework I made was used to create the [Procedural Wold Using Perlin Noise Project](../proceduralworldpn/).
+
+As such, I highly recommend viewing that page while this page is still in development.
 
 ## Sample Scene
 
