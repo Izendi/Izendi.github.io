@@ -10,13 +10,17 @@ showLikes: false
 ---
 
 {{< lead >}}
-Videos of some old university projects I was a part of.
+Videos of some old university group projects I was a part of.
 {{< /lead >}}
 
 ## VR Omniwalker Project
 
 {{< youtube kLVuYC7X_5I>}}
 
+
+## First Attempt at a C++ OpenGL game engine with custom physics
+
+{{< youtube esgsMufSNew>}}
 
 
 
