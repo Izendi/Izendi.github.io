@@ -10,8 +10,11 @@ showLikes: false
 ---
 
 {{< lead >}}
-This project was developed using OpenGl with C++ and a number of utility libraries such as glm, stb_perlin, glew, glfw and dearimgui. Links to each can be found at the bottom of this page or on the project's github repo.
+This is christopher winters
 {{< /lead >}}
+
+## This is a new title
+This is my new line
 
 ## Related
 I discuss the use of noise in computer graphics in a separate blog post (which can be found here: [Noise in Graphics](../../samples/perlinnoise))
