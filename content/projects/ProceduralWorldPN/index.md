@@ -1,5 +1,5 @@
 ---
-title: "Procedural World using Perlin Noise"
+title: "Procedural World using Perlin Noise (C++ & OpenGL implementation)"
 date: 2024-5-16
 draft: false
 description: "Using Perlin noise for procedural terrain and cloud generation"
