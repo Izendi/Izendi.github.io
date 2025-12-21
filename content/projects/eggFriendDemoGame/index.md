@@ -16,7 +16,9 @@ The game is played entirely with the mouse or with the touch screen on IOS. You 
 
 ## Background?
 
-Some of my second year students in Japan wanted to learn how to make a game. They were interested in making a tamagotchi style quiz game and had drawn a number of tamagotchi style characters. I made this small demo game to demonstrate what was possible in Godot. it was also a func chance for me to spend some more time learning the engine. 
+Some of my second year students in Japan wanted to learn how to make a game. They were interested in making a tamagotchi style quiz game and had drawn a number of tamagotchi style characters. I made this small demo game to demonstrate what was possible in Godot.
+
+It's very bare bones, but it was a fun opportunity for me to test exporting a godot game to the web with save features and play with the engine tools a bit more.
 
 All character art credit goes to my students. Background art was sourced from online, and the title font was AI generated. 
 The code and other tasks were was done by me. I intend to polish up some of the code and use this as a learning template in my future classes. 
