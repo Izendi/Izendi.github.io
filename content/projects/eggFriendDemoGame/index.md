@@ -31,4 +31,7 @@ Note, most of the game text is in Japanese.
 
 ## Images from the game:
 
-![Title Screen](MenuIMG.png)
+![Title Screen](ef_4.png)
+![Gameplay Screen 1](ef_3.png)
+![Gameplay Screen 2](ef_2.png)
+![Gameplay Screen 3](ef_1.png)
