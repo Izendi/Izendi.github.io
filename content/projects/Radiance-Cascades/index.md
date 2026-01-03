@@ -1,6 +1,6 @@
 ---
 title: "GI using Radiance Cascades"
-date: 2024-12-27
+date: 2025-12-27
 draft: false
 description: "My attempt to implement a basic version of Alexander Sannikov's Radiance Cascades Global Illumination technique."
 tags: ["blog", "Play In Browser"]
@@ -26,18 +26,13 @@ The top left image was the prototype textures, the levels start from the middle 
 ![cascade level textures being merged](featured.png)
 
 ## The Problem Being Solved
-Traditional methods of generating accurate global illumination, such as Ray and Path tracing are limited by the high performance cost that grows with the number of rays being cast.
-At best, with basic ray tracing, increasing the number of rays cast per pixel has a linear growth cost. But when we look into more advanced techniques such as path tracing, which spawn multiple rays
-per ray surface bounce, we begin to look at exponential computational cost.
+Traditional methods of generating accurate global illumination, such as Ray and Path tracing are limited by thehigh performance cost that grows with the number of rays being cast. At best, with basic ray tracing, increasingthe number of rays cast per pixel has a linear growth cost. But when we look into more advanced techniques suchas path tracing, which spawn multiple rays per ray surface bounce, we begin to look at exponential computationalcost.
 
-Many methods exist to improve pathtracing, such as supporting it via hardware acceleration, only sampling the most important ray bounce direction, or reducing the overall number of rays to create a noisy image and
-then cleaning it up using generative AI techniques (such as NVIDEA's DLSS solution).
+Many methods exist to improve path-tracing, such as supporting it via hardware acceleration, only sampling themost important ray bounce direction, or reducing the overall number of rays to create a noisy image and thencleaning it up using generative AI techniques (such as NVIDIA’s DLSS solution).
 
-Despite these methods making real time global illumination more accessible than ever, the fundamental limitation of runaway computational cost is still present and developers are always working around this limitation.
+Despite these methods making real time global illumination more accessible than ever, the fundamental limitationof runaway computational cost is still present and developers are always working around this limitation.
 
-**Radiance cascades** however offers an alternate approach for approximating global illumination. It was inspired by radiance probes, a technique that also aims to approximate global illumination more quickly.
-Radiance probes work by placing probes around your scene, these probes cast out rays and gather radiance information from the scene. Then each fragment making up your scene, samples from a set of nearby probes to get an approximation of the global illumination.
-Probes have been used effectivly, but the questions such as how many probes to use or how many rays each probe should cast remain and the cost is still growing at least linearly as the number of probes increase.
+However, **radiance cascades** offers an alternate approach for approximating global illumination. It wasinspired by radiance probes, a technique that also aims to approximate global illumination more quickly. Radianceprobes work by placing probes around your scene, these probes cast out rays and gather radiance information fromthe scene. Then each fragment making up your scene, samples from a set of nearby probes to get an approximationof the global illumination. Probes have been used effectively, but the questions such as how many probes to useor how many rays each probe should cast remain and the cost is still growing at least linearly as the number ofprobes increase.
 
 ## How Radiance Cascades Solve This Problem
 Radiance cascades attempts to solve these problems in two ways. First by explicitly structuring how probes are placed in the scene and secondly defining hard rules for how many rays are cast for each probe, which is determined by their placement in a hierarchy.
