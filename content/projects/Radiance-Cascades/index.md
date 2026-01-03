@@ -3,7 +3,7 @@ title: "GI using Radiance Cascades"
 date: 2024-12-27
 draft: false
 description: "My attempt to implement a basic version of Alexander Sannikov's Radiance Cascades Global Illumination technique."
-tags: ["blog"]
+tags: ["blog", "Play In Browser"]
 series_order: 8
 showViews: false
 showLikes: false
