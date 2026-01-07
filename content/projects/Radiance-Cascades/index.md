@@ -11,6 +11,8 @@ showLikes: false
 ## Try my current version 
 [Radiance Cascades Demo](https://izendi.github.io/rc_demo/radiance_cascades_v1_demo.html)
 
+**CONTROLS:** (Right mouse button to draw segments, Left Mouse Button to select menu options.)
+
 **NOTE:** It works but there are issues with it not being sRGB correct, as well as more light leakage and ringing than intended. But it's still cool to mess around with in its current state.
 
 ## Introduction
