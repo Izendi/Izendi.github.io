@@ -29,7 +29,7 @@ I discuss the use of noise in computer graphics in a separate blog post (which c
 This is the same repo as the Zendite Engine code. Different branches are for different use cases. In this case though, Master contains the procedural world implementation.
 
 ## 1. Introduction
-Perlin noise produces pseudo random number values that have a smooth gradient change from one value to another. Unlike white noise which just outputs random values with no regard to what value came before. (See [here](../perlinnoise) for more info)
+Perlin noise produces pseudo random number values that have a smooth gradient change from one value to another. Unlike white noise which just outputs random values with no regard to what value came before.
 
 We generate Perlin noise in one, two or three dimensions. When generating in 2D, we essentially create a grid of noise values.
 In graphics, colors can be represented as a combination of values between 0-1. To understand how this can be used to generate terrain in a virtual world, it is first important to understand height fields:
