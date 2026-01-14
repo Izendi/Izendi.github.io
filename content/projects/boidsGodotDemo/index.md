@@ -24,7 +24,9 @@ Boids (short for "bird-oid objects") are "an artificial life program, developed 
 <iframe src="/godot_boids/boids_demo.html" width="960" height="540" style="border:none;"></iframe>
 
 
+## GitHub Code
 
+[GitHub Source Code](https://github.com/Izendi/boids_v3)
 
 ## References
 1. <a id="ref1"> Boids Wikipedia Page. [Online]. Available: https://en.wikipedia.org/wiki/Boids. [Accessed: July. 6, 2025].</a>
