@@ -13,9 +13,6 @@ showLikes: false
 This is christopher winters
 {{< /lead >}}
 
-## This is a new title
-This is my new line
-
 ## Related
 I discuss the use of noise in computer graphics in a separate blog post (which can be found here: [Noise in Graphics](../../samples/perlinnoise))
 
@@ -24,6 +21,12 @@ I discuss the use of noise in computer graphics in a separate blog post (which c
 
 ## Relaxing Video
 {{< youtube 170GDYNcOmQ>}}
+
+## Source Code
+
+[Link to GitHub source code repo](https://github.com/Izendi/zenditeEngineV2)
+
+This is the same repo as the Zendite Engine code. Different branches are for different use cases. In this case though, Master contains the procedural world implementation.
 
 ## 1. Introduction
 Perlin noise produces pseudo random number values that have a smooth gradient change from one value to another. Unlike white noise which just outputs random values with no regard to what value came before. (See [here](../perlinnoise) for more info)
