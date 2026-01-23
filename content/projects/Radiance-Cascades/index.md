@@ -31,6 +31,8 @@ The images below shows each cascade level being merged into the final image. (Wi
 
 ![Hi There Scene](RC_Writing_2.png)
 
+![Lightshow Scene](featured_2.png)
+
 ## The Problem Being Solved
 Radiance cascades aims to be a real time solution to the **spatial frequency problem** in global illumination.
 
@@ -81,13 +83,56 @@ Above cascade 0 we have cascade level 1. This cascade level has fewer probes tha
 This pattern continues until the highest cascade which has the fewest probes (with large distances between the probes), but each probe casts a large number of rays very far into the scene and the rays start position is offset greatly from the probes center.
 
 The diagram below explains the idea:
+- BLUE = Cascade 0
+- ORANGE = Cascade 1
+- GREEN = Cascade 2
+- RED = Cascade 3
+- PURPLE = Cascade 4
 
-![Penumbra With Markings](Far_Probe.png)
+![RC Paper EX](RC_Paper_Ex.png)
 
-In general terms, we distribute levels of cascade probes from level 0 up to level n. Each level changes the "resolution" of it's linear and angular component. [<a href="#ref2">2</a>\]
-What this basically means is that there are lots of probes laid out at level 0, potentially hundreds or thousands, uniformly laid out in a grid. The lowest layers have lots of probes but very few rays (high linear resolution), as you increase the level of the cascade the linear resolution drops (number of probes), and the angular resolution (number of rays) increases. But since the rays double with every level and the probes decrease by a quarter every level, the total number of rays in each cascade level is half the previous level.
+We can see in the above diagram (taken from the original Radiance Cascades paper [<a href="#ref2">2</a>\]), that as we go up a cascade level the number of probes decreases but the number of rays that each probe emits increases (in this example by a factor of 2 per level).
 
+Additionally, each ray starts where the previous cascade ray ended. So if cascade 0 has a start distance offset of 0 and a max ray march distance of 2, cascade 1's rays would start 2 pixels away from the probe. If cascade 1 then marched 10 pixels, cascade 2's rays would start 12 pixels offset from the probes center.
+This is done so that probes in higher cascade levels, only capture lighting data from far away (as intended) and do not capture nearby data (which is the job of the lower cascade levels).
+All of this ties back in to the idea of higher cascade levels being responsible for **high spatial frequency** sampling and low cascade levels being responsible for low **spatial frequency sampling**. 
 
+Remember high spatial frequency is when light changes fast over a short distance (this is what low level probes handle as there are a large number of them and they only cast a small number of short distance rats).
+Whereas low spatial frequency, which is when light changes slowly over large areas, is handled by high level probes as they cast lots of long distance rays at a large offset from the probes center, to capture far away object lighting contributions. When far away from an object, moving though space only changes the lighting contribution slowly, so these probes can be spaced far apart.
+
+Overall, this allows the number of rays in each cascade level to remain the same (grow linearly), which each cascade level handles a different spatial frequency.
+
+## Current implementation details
+
+This implementation aimed to fix the problems encountered in my old attempt: [OLD Radiance Cascades Implementation](../../samples/radiance-cascades-old/).
+
+The old version had too few rays per cascade level, as such, I aimed to implement a large number of rays for this attempt and compare the difference.
+
+In this version, each cascade level 1048576 rays (just over a million). Having each cascade level have the same number of rays meant I could store each in a 1024 by 1024 resolution texture.
+
+The probe to ray ratio is as follows:
+
+- Cascade 4 has: (1024 probes and each probe casts 1024 rays)
+
+- Cascade 3 has: (4096 probes and each probe casts 256 rays)
+
+- Cascade 2 has: (16384 probes and each probe casts 64 rays)
+
+- Cascade 1 has: (65536 probes and each probe casts 16 rays)
+
+- Cascade 0 has: (262144 probes and each probe casts 4 rays)
+
+Each ray is ray marched through the scene until it hits an SDF or reaches it's maximum length limit.
+
+If a ray hits an SDF it stored the color data of that SDF, if it hits nothing, it finds the 4 nearest probes to the current emitting probe in cascade layer N+1 (unless we are the highest cascade level already), then it finds the 4 rays with the most similar angle from each of the 4 probes, averages the color from each then bilinearly interpolates between the 4 color values and stores that in Cascade N's texture data for that ray.
+
+So, starting at cascade 4 we merge downwards until we reach cascade 0, then we have a 512 by 512 resolution output buffer which samples the cascade 0 texture (cascade 0 now contains all combined data for all cascade levels), and uses the built in texture sampling bilinear interpolation to generate a smooth final output (which is what you see in all the example images).
+
+the image below shows the texture output for each cascade level from left to right, with the top left being cascade 4 and the bottom right being the final output sampling from cascade 0.
+
+![Features scene](RC_All_Levels.png)
+
+You can mess around with this yourself in the demo by switching the display buffer with the top left selector drop down menu.
 
 ## References
 1. <a id="ref1"> Alexander Sannikov, "ExileCon 2023 - Rendering Path of Exile 2," YouTube, Jul. 29, 2023. [Online]. Available: https://www.youtube.com/watch?v=TrHHTQqmAaM&t=2037s. [Accessed: Jan. 14, 2025].</a>
@@ -95,17 +140,3 @@ What this basically means is that there are lots of probes laid out at level 0, 
 3. <a id="ref3"> SimonDev. "Exploring a New Approach to Realistic Lighting: Radiance Cascades" [Online Video]. Available: [URL](https://www.youtube.com/watch?v=3so7xdZHKxw). Accessed: January 14, 2025.</a>
 4. <a id="ref4"> SimonDev. "Featured Courses" [Web Page]. Available: [URL](https://simondev.io/courses). Accessed: February 15, 2025</a>
 
-
-## Images
-
-![prototype](sample.png)
-
-![level 3](lvl_3_tex.png)
-
-![level 2](lvl_2_tex.png)
-
-![level 1](lvl_1_tex.png)
-
-![level 0](lvl_0_tex.png)
-
-![level 0 alt](old_featured.png)
