@@ -3,7 +3,7 @@ title: "Boids Using Godot"
 date: 2025-11-19
 draft: false
 description: "Running a boids demo via web assembly"
-tags: ["Game", "Play In Browser"]
+tags: ["project", "Game", "Play In Browser"]
 series_order: 1
 showViews: false
 showLikes: false

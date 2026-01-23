@@ -10,11 +10,14 @@ showLikes: false
 ---
 
 {{< lead >}}
-This is christopher winters
+No game engine used, made entirely with the use of C++ and GLSL using the OpenGL graphics API.
 {{< /lead >}}
 
-## Related
-I discuss the use of noise in computer graphics in a separate blog post (which can be found here: [Noise in Graphics](../../samples/perlinnoise))
+## Source Code
+
+[Link to GitHub source code repo](https://github.com/Izendi/zenditeEngineV2)
+
+This is the same repo as the Zendite Engine code. Different branches are for different use cases. In this case though, Master contains the procedural world implementation.
 
 ## Video of Final Product
 {{< youtube FaSCmcUDz34>}}
@@ -22,11 +25,6 @@ I discuss the use of noise in computer graphics in a separate blog post (which c
 ## Relaxing Video
 {{< youtube 170GDYNcOmQ>}}
 
-## Source Code
-
-[Link to GitHub source code repo](https://github.com/Izendi/zenditeEngineV2)
-
-This is the same repo as the Zendite Engine code. Different branches are for different use cases. In this case though, Master contains the procedural world implementation.
 
 ## 1. Introduction
 Perlin noise produces pseudo random number values that have a smooth gradient change from one value to another. Unlike white noise which just outputs random values with no regard to what value came before.
@@ -211,3 +209,6 @@ I changed the normal map used compared to the one recommended from the video ser
 The...
 
 [In development]
+
+## Related
+I discuss the use of noise in computer graphics in a separate blog post (which can be found here: [Noise in Graphics](../../samples/perlinnoise))
