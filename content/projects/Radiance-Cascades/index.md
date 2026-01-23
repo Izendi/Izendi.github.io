@@ -11,9 +11,11 @@ showLikes: false
 ## Try my current version 
 [Radiance Cascades Demo](https://izendi.github.io/rc_demo/radiance_cascades_v1_demo.html)
 
-**CONTROLS:** (Hold the right mouse button to draw segments, Use the Left mouse button to select menu options.)
+**CONTROLS:** Hold the **right mouse button** to draw segments, Use the **Left mouse button** to select menu options.
 
-**NOTE:** Slider next to the scene select is to change the thickness of segments. You can change segment colors with the color picker. 
+***MENU*:** Top left slider controls segment thickness. "Toggle length Slider" button reveals a menu where you can adjust the ray march distance "IL = Interval Length" and start distance "SD = Start Distance" by adjusting sliders
+
+ 
 
 ## Introduction
 
@@ -95,6 +97,9 @@ We can see in the above diagram (taken from the original Radiance Cascades paper
 
 Additionally, each ray starts where the previous cascade ray ended. So if cascade 0 has a start distance offset of 0 and a max ray march distance of 2, cascade 1's rays would start 2 pixels away from the probe. If cascade 1 then marched 10 pixels, cascade 2's rays would start 12 pixels offset from the probes center.
 This is done so that probes in higher cascade levels, only capture lighting data from far away (as intended) and do not capture nearby data (which is the job of the lower cascade levels).
+
+You can mess around with these values in the demo by selecting the "*Toggle length sliders*" button and messing with the ray interval lengths and start offset lengths.
+
 All of this ties back in to the idea of higher cascade levels being responsible for **high spatial frequency** sampling and low cascade levels being responsible for low **spatial frequency sampling**. 
 
 Remember high spatial frequency is when light changes fast over a short distance (this is what low level probes handle as there are a large number of them and they only cast a small number of short distance rats).
