@@ -11,7 +11,7 @@ showLikes: false
 ## Try my current version 
 [Radiance Cascades Demo](https://izendi.github.io/rc_demo/radiance_cascades_v1_demo.html)
 
-**CONTROLS:** Hold the **right mouse button** to draw segments, Use the **Left mouse button** to select menu options.
+**CONTROLS:** Hold the **right mouse button** to draw segments, Use the **left mouse button** to select menu options.
 
 ***MENU*:** Top left slider controls segment thickness. "Toggle length Slider" button reveals a menu where you can adjust the ray march distance "IL = Interval Length" and start distance "SD = Start Distance" by adjusting sliders
 
