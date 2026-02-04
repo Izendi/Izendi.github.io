@@ -16,7 +16,7 @@ The game is played entirely with the mouse or with the touch screen on IOS. You 
 
 ## Click the link below to play the game
 
-[Egg Friend Game](https://izendi.github.io/egg_friend_game_jpn/egg_friend.html)
+[Egg Friend Game](https://izendi.github.io/egg_friend_game_latest/egg_friend_game.html)
 
 ## Background
 
