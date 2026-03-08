@@ -1,5 +1,5 @@
 ---
-title: "Procedural World using Perlin Noise (C++ & OpenGL implementation)"
+title: "Procedural World using Perlin Noise (ECS, C++ & OpenGL implementation)"
 date: 2024-5-16
 draft: false
 description: "Using Perlin noise for procedural terrain and cloud generation"
@@ -7,6 +7,7 @@ tags: ["Video", "project", "blog"]
 series_order: 1
 showViews: false
 showLikes: false
+weight: 1
 ---
 
 {{< lead >}}

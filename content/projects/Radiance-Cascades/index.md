@@ -7,6 +7,7 @@ tags: ["project","blog", "Play In Browser"]
 series_order: 8
 showViews: false
 showLikes: false
+weight: 2
 ---
 ## Try my current version 
 [Radiance Cascades Demo](https://izendi.github.io/rc_demo/radiance_cascades_v1_demo.html)

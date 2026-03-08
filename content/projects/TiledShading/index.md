@@ -7,6 +7,7 @@ tags: ["Video Presentation"]
 series_order: 1
 showViews: false
 showLikes: false
+weight: 3
 ---
 
 {{< lead >}}
