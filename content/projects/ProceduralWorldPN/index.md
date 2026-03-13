@@ -20,11 +20,10 @@ No game engine used, made entirely with the use of C++ and GLSL using the OpenGL
 
 This is the same repo as the Zendite Engine code. Different branches are for different use cases. In this case though, Master contains the procedural world implementation.
 
-## Video of Final Product
-{{< youtube FaSCmcUDz34>}}
+## Demo Video With Commentary
 
-## Relaxing Video
-{{< youtube 170GDYNcOmQ>}}
+## Demo Video Without Commentary
+{{< youtube FaSCmcUDz34>}}
 
 
 ## 1. Introduction
@@ -207,9 +206,13 @@ I changed the normal map used compared to the one recommended from the video ser
 
 ## 10. Implementing Sun & Day/Night Cycle
 
-The...
+The day and night cycle works by "lerping" between different sky colors depending on the position of the virtual sun in the sky.
 
-[In development]
+The sky is just the OpenGL clear color buffer. There are a number of colors (such as midday, evening, night, etc.) and as the sun moves through the sky it will be located between two positions that determine the current time of day (e.g. between midday and evening). If the sun is halfway between the sky point defined as evening and the point defined as mid day, the weight value for the linear interpolate (lerp) between these two colors will be 0.5, merging 50% of each to produce the final color output of the sky.
+
 
 ## Related
 I discuss the use of noise in computer graphics in a separate blog post (which can be found here: [Noise in Graphics](../../samples/perlinnoise))
+
+## Relaxing Video
+{{< youtube 170GDYNcOmQ>}}
