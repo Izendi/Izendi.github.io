@@ -184,9 +184,8 @@ The video can be found [here](https://www.youtube.com/watch?v=9dr-tRQzij4&t=627s
 
 The clouds were probably the part that turned out least like I wanted them to.
 
-I was initially inspired by the clouds from [paradise is coming blog post](https://iquilezles.org/articles/dynclouds/) by **Inigo Quilez**.
-In fact, this project overall was inspired by the 64k video submission of [paradise is coming](https://www.youtube.com/watch?v=BUjUf0c7U3I).
-I'm not sure what it is, but I find late 1990s and early 2000s 3D graphics really appealing.
+I was initially inspired by the clouds from the "[paradise is coming blog post](https://iquilezles.org/articles/dynclouds/)" from **Inigo Quilez**.
+This procedural world project was originally inspired by that 64k video submission of [paradise is coming](https://www.youtube.com/watch?v=BUjUf0c7U3I). I found the early 3D graphics style of it to be highly appealing.
 
 My "clouds" were created by generating multiple octaves of perlin noise, that are offset in different directions, and then combined into a final texture image.
 This texture image is then rendered onto a skydome object that surrounds the height field mesh landscape, but certain parts that are below a certain brightness threshold are culled (which is what produces the gaps between the clouds the light can shine through).
