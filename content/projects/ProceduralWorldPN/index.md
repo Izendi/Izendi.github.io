@@ -55,7 +55,7 @@ For in depth details on rendering a hight field in computer graphics, refer to m
 
 
 ## 3. Creating a Height Field Using Perlin Noise
-We can create height fields in multiple ways: e.g. manually using image editing tools such as photo shop, using existing height fields (such as the one from [Planet Earth Height Field](https://tangrams.github.io/heightmapper/)).
+We can create height fields in multiple ways: e.g. manually using image editing tools such as photo shop or using existing height fields (such as the one from [Planet Earth Height Field](https://tangrams.github.io/heightmapper/)).
 
 
 Or we can generate one procedurally using algorithms. <br/>
