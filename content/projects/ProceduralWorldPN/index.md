@@ -44,7 +44,7 @@ In this scenario we have a grid of squares, with each square being a different s
 
 This may seem arbitrary at first, but we can use this data structure to represent changes in terrain height. For example take a look at this website: [Planet Earth Height Field](https://tangrams.github.io/heightmapper/).
 It depicts satellite images of the Earth in grey scale, where the lower the elevation, the darker the image, but the higher the elevation the lighter the image.
-If look for large mountain ranges, such as the Andes along the west coast of South America, you will see a vertical strip of light grey and white, indicating that this region has a high elevation.
+If we look for large mountain ranges, such as the Andes along the west coast of South America, you will see a vertical strip of light grey and white, indicating that this region has a high elevation.
 
 example image from the linked website:
 ![HF Image](hf_example.png)
