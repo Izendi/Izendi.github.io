@@ -208,7 +208,7 @@ The wavy water effect was created using a DuDv map (an image that stores offsets
 The reflections were created by having a second camera mirrored under the water from the main view camera. This camera would cull all geometry below the water surface plane, meaning only geometry above the water remained visible. When the primary camera looked down this camera would look up and capture and image of the terrain from below, we will call this the "reflection texture." We then find the screen space coordinates of each fragment of the water quad and then use those points to sample from the reflection texture and display those texels onto the water surface quad.
 
 
-## 10. Implementing Sun & Day/Night Cycle
+## 10. Implementing the Sun alongside the Day/Night Cycle
 
 The day and night cycle works by "lerping" between different sky colors depending on the position of the virtual sun in the sky.
 
