@@ -100,7 +100,7 @@ float FbmNoise2D
 }
 ```
 
-In order to create a Perlin Noise Height Field, we first define the width and height of our height field texture, then we call `FgmNoise2D` (width * height) times to find the color (intensity) of each perlin noise value at at each pixel/texel. The following code segment is from my implementation of calculating the valeu for each pixel and storing it in a `std::vector<float>` of noise data.
+In order to create a Perlin Noise Height Field, we first define the width and height of our height field texture, then we call `FgmNoise2D` (width * height) times to find the color (intensity) of each perlin noise value at at each pixel/texel. The following code segment is from my implementation of calculating the value for each pixel and storing it in a `std::vector<float>` of noise data.
 
 Then I store the noise data in a texture for sampling using `glTexSubImage2D`.
 
