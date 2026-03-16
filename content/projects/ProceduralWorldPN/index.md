@@ -205,7 +205,7 @@ I changed the normal map used compared to the one recommended from the video ser
 
 The wavy water effect was created using a DuDv map (an image that stores offsets for texture coordinates). it is used to shift the sampling position in a slightly different direction over time creating that wavy water effect.
 
-The reflections were created by having a second camera mirrored under the water from the main view camera. This camera would cull all geometry below the water surface plane, meaning only geometry above the water remained visible. When the primary camera looked down this camera would look up and capture and image of the terrain from below which would then be sampled and displayed onto the water surface after performing projective texturing.
+The reflections were created by having a second camera mirrored under the water from the main view camera. This camera would cull all geometry below the water surface plane, meaning only geometry above the water remained visible. When the primary camera looked down this camera would look up and capture and image of the terrain from below, we will call this the "reflection texture." We then find the screen space coordinates of each fragment of the water quad and then use those points to sample from the reflection texture and display those texels onto the water surface quad.
 
 
 ## 10. Implementing Sun & Day/Night Cycle
