@@ -171,7 +171,10 @@ This video breaks it down in more detail (it is the same as the one at the top o
 
 ![grass Image](grass.png)
 
-The grass was inpired by a youtube video from a creator known as [Acerola](https://www.youtube.com/@Acerola_t), who did a video on how games render fur using shell texturing. In his video, he also demonstrates creating grass via shell texturing, which is an efficient and fairly simple menthod of generating grass.
+The grass was inspired by a youtube video from a creator known as [Acerola](https://www.youtube.com/@Acerola_t), who showed how games render fur using shell texturing. He also demonstrates a highly efficient method of creating grass with shell texturing.
+It works by dividing up a surface into a grid, then rending the surface multiple times each time slightly offset along the surface normal of the original surface. (imagine many planes stacked on top of each other floating a few centimeters apart).
+At each level, each grid value is assigned a random value between the 0 and the offset of the highest surface. 
+If the surface high is higher than the random value, the alpha value for every pixel in that grid space is set to zero, making it transparent. 
 
 The video can be found [here](https://www.youtube.com/watch?v=9dr-tRQzij4&t=627s)
 
