@@ -163,9 +163,7 @@ Before we break it down, the final scene  of my procedurally generated world loo
 
 
 ## 6. Breakdown of the various elements
-This video breaks it down in more detail (it is the same as the one at the top of the page)
-
-{{< youtube FaSCmcUDz34>}}
+The following sections detail the various components that make up the procedural world.
 
 ## 7. Implementing Grass
 
@@ -201,8 +199,7 @@ The cube which acts as my sun is both a directional and a point light, the direc
 ![water Image](water.png)
 
 The water was based of a video tutorial series from the YouTuber [ThinMatrix](https://www.youtube.com/@ThinMatrix).
-He has a series on water in OpenGL which was very useful as a template for my water system.
-The video series can be found [here](https://www.youtube.com/playlist?list=PLRIWtICgwaX23jiqVByUs0bqhnalNTNZh).
+He has a series on water in OpenGL which can be found [here](https://www.youtube.com/playlist?list=PLRIWtICgwaX23jiqVByUs0bqhnalNTNZh).
 
 I changed the normal map used compared to the one recommended from the video series as my own version looked better with the sun's specular highlights on the water.
 
