@@ -132,7 +132,7 @@ glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, hfWidth, hfHeight, GL_RGBA, GL_FLOAT, no
 
 We can then use this texture to render a height field using the method described in my [opengl height map rendering](../gl-heightmap) blog post.
 
-By sampling the noise height map texture as a regular OpenGL texture and displaying it to both a flat quad the height field mesh we should get something that looks like the below image.
+By sampling the noise height map texture as a regular OpenGL texture and rendering onto both a flat quad and the height field mesh, we should get something that looks like the below image.
 (The lighter sections represent a higher elevation, and the darker sections a lower elevation).
 
 ![virtual environment img](HF_in_engine.png)
