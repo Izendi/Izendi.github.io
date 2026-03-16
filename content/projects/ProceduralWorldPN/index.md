@@ -192,7 +192,7 @@ This texture image is then rendered onto a skydome object that surrounds the hei
 
 The image below shows a wireframe image of the skydome object.
 
-![wireframe skydome Image](wireframe_skydome.png).
+![wireframe skydome Image](wireframe_skydome.png)
 
 The cube which acts as my sun is both a directional and a point light, the directional light ignores the skydome object, but the point light illuminates the points it is close to. Hence you get the effect of the clouds being bright and white when the sun in behind them, but darker and more grey when the sun cube is far away.
 
